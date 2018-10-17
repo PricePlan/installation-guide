@@ -4,12 +4,8 @@
 
 Используя полученные данные, следует выполнить команды:
 
-```
-$ docker login -u 
-<
-your_login
->
- registry.priceplan.pro
+```bash
+$ docker login -u <your_login> registry.priceplan.pro
 ```
 
 К сожалению, неоднократно были отмечены проблемы в работе команды`docker login`. При этом после ввода пароля отображается подобное сообщение:
@@ -19,17 +15,9 @@ your_login
 
 Если в вашем случае события получили такое развитие, следует выполнить следующие команды:
 
-```
-$ mkdir 
-~
-/.docker/
-$ cat 
-<
-<
-EOT
->
->
- ~/.docker/config.json
+```bash
+$ mkdir ~/.docker/
+$ cat <<EOT >> ~/.docker/config.json
 {
   "auths": {
     "registry.priceplan.pro": {
@@ -44,14 +32,10 @@ EOT
 
 Для интересующихся:[https://docs.docker.com/engine/reference/commandline/login/\#credentials-store](https://docs.docker.com/engine/reference/commandline/login/#credentials-store)
 
-```
-$ export PRICEPLAN_VERSION=
-<
-actual_version
->
-
+```bash
+$ export PRICEPLAN_VERSION=<actual_version>
 $ docker pull registry.priceplan.pro/priceplan/priceplan:${PRICEPLAN_VERSION}
 ```
 
-По окончании загрузки можно переходить к следующему этапу.
+По окончании загрузки можно переходить к следующему этапу - конфигурирование сервисов .
 
