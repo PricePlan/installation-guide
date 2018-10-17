@@ -1,9 +1,9 @@
 # Summary
 
 * [Подготовка к установке](README.md)
-* [Загрузка образа PricePlan](chapter1.md)
-* [Конфигурирование сервисов](konfigurirovanie-servisov.md)
-* [Запуск](start-nabora-prilozhenii.md)
-* [Создание схемы данных](sozdanie-shemi-dannih.md)
-* [Проверка результатов](proverka-rezultatov.md)
+* [Загрузка образа PricePlan](download.md)
+* [Конфигурирование сервисов](configuration.md)
+* [Запуск](start.md)
+* [Создание схемы данных](db-schema.md)
+* [Проверка результатов](final-tests.md)
 
